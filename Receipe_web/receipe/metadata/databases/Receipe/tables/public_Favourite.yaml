@@ -1,0 +1,13 @@
+table:
+  name: Favourite
+  schema: public
+object_relationships:
+  - name: Receipe
+    using:
+      foreign_key_constraint_on: receipe_id
+  - name: Receipes
+    using:
+      foreign_key_constraint_on: receipe_id
+  - name: user
+    using:
+      foreign_key_constraint_on: user_id

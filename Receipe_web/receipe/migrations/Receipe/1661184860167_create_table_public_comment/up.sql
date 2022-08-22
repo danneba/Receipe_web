@@ -1,0 +1,1 @@
+CREATE TABLE "public"."comment" ("Id" serial NOT NULL, "Receipe_id" integer NOT NULL, "user_id" integer NOT NULL, "comment" text NOT NULL, PRIMARY KEY ("Id") , FOREIGN KEY ("user_id") REFERENCES "public"."user"("Id") ON UPDATE restrict ON DELETE restrict, FOREIGN KEY ("Receipe_id") REFERENCES "public"."Receipe"("Id") ON UPDATE restrict ON DELETE restrict);

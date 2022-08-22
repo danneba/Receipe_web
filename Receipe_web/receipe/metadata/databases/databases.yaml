@@ -1,0 +1,10 @@
+- name: Receipe
+  kind: postgres
+  configuration:
+    connection_info:
+      database_url: postgres://bybrazadguzzts:d129bad3a9cd288c78e84a9d10a79aa64eb511ec61e7ee743c7df150f00f5c67@ec2-44-206-137-96.compute-1.amazonaws.com:5432/da30q2h1coq75a
+      isolation_level: read-committed
+      use_prepared_statements: false
+  customization:
+    naming_convention: hasura-default
+  tables: "!include Receipe/tables/tables.yaml"
