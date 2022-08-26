@@ -11,6 +11,8 @@ services:
     image: hasura/graphql-engine:v2.10.1
     ports:
     - "8080:8080"
+    extra_hosts:
+      - "localhost:host-gateway"
     depends_on:
     - "postgres"
     restart: always
@@ -25,7 +27,8 @@ services:
       HASURA_GRAPHQL_DEV_MODE: "true"
       HASURA_GRAPHQL_ENABLED_LOG_TYPES: startup, http-log, webhook-log, websocket-log, query-log
       ## uncomment next line to set an admin secret
-      # HASURA_GRAPHQL_ADMIN_SECRET: myadminsecretkey
+      HASURA_GRAPHQL_ADMIN_SECRET: myadminsecretkey
+      HASURA_GRAPHQL_UNAUTHORIZED_ROLE: anonymous
 volumes:
   db_data:
 
