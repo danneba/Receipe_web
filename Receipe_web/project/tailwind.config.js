@@ -5,7 +5,19 @@ module.exports = {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'define-yellow':'#F5F6EA',
+        'define-pink':'#D54215'
+      },
+      spacing:{
+        '65':'165px',
+        '75':'275px',
+        '85':'181px',
+        '98':'596px',
+        '95':'398px'
+      },
+    },
   },
   plugins: [],
 }
