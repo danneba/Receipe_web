@@ -1,0 +1,7 @@
+- "!include public_Favourite.yaml"
+- "!include public_Image.yaml"
+- "!include public_Ingredient.yaml"
+- "!include public_Receipe.yaml"
+- "!include public_category.yaml"
+- "!include public_comment.yaml"
+- "!include public_user.yaml"

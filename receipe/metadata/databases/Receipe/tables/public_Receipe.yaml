@@ -1,0 +1,36 @@
+table:
+  name: Receipe
+  schema: public
+object_relationships:
+  - name: user
+    using:
+      foreign_key_constraint_on: user_id
+array_relationships:
+  - name: Favourites
+    using:
+      foreign_key_constraint_on:
+        column: receipe_id
+        table:
+          name: Favourite
+          schema: public
+  - name: Images
+    using:
+      foreign_key_constraint_on:
+        column: Receipe_id
+        table:
+          name: Image
+          schema: public
+  - name: Ingredients
+    using:
+      foreign_key_constraint_on:
+        column: Receipe_id
+        table:
+          name: Ingredient
+          schema: public
+  - name: comments
+    using:
+      foreign_key_constraint_on:
+        column: Receipe_id
+        table:
+          name: comment
+          schema: public
