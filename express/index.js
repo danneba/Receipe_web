@@ -11,7 +11,9 @@ const app = express();
 app.use(express.json);
 
 app.use(cors());
-
+app.get("/",(req,res)=>{
+  res.send("serbdr....")
+})
 
 const HASURA_OPERATION = `
 mutation signup($Email:String!,$First_name:String!,$Last_name:String!,$Password:String!) {
@@ -41,6 +43,7 @@ const signup_execute = async (variables) => {
 
 app.post("/signup", async (req, res) => {
     // get request input
+    console.log("handler")
     const { Email, First_name, Last_name } = req.body.input;
   
     // run some business logic

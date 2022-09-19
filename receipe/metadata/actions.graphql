@@ -11,6 +11,8 @@ type SignupOutput {
   Email: String!
   Id: Int!
   Password: String!
+  First_name: String!
+  Last_name: String!
   token: String!
 }
 

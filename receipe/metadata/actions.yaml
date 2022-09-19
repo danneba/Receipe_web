@@ -2,7 +2,7 @@ actions:
   - name: signup
     definition:
       kind: synchronous
-      handler: http://localhost:5000/signup
+      handler: http://localhost:5020/signup
     permissions:
       - role: Anonymous
       - role: User
